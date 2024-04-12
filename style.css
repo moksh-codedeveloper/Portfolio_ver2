@@ -34,7 +34,6 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: chocolate;
 }
 
 header a{
@@ -47,7 +46,19 @@ header a{
 }
 header a:hover{
     color: blue;
-    background-color: #fff;
     opacity: 1;
     transition: 0.5s ease;
 }
+
+.home-img img{
+    height: 50vh;
+    background-color: transparent;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+span{
+    color: blueviolet;
+    text-decoration: dashed;
+}
+
