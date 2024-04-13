@@ -62,3 +62,13 @@ span{
     text-decoration: dashed;
 }
 
+.header i{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.header .navbar{
+    display: none;
+    padding-left: 10px;
+}
