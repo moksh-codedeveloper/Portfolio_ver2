@@ -63,7 +63,6 @@ span{
     flex-wrap: row;
 }
 .home{
-    height: 100vh;
     justify-content: space-between; 
     display: flex;
     left: 0;
@@ -89,4 +88,32 @@ span{
     margin: 1rem;
     padding: 1rem;
     left: 10;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: 600;
+    justify-content: center;
+    color: rgba(251, 157, 80, 0.76);
+}
+
+.about-img img{
+    width: 35vw;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }
