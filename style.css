@@ -137,7 +137,6 @@ span{
     flex-direction: row;
     height: 50rem;
     width: 100%;
-    /* align-items: center; */
 }
 
 .portfolio-layer{
@@ -152,6 +151,7 @@ span{
 }
 .portfolio-container img{
     height: 40%;
+    position: relative;
 }
 .portfolio-layer p{
     text-align: center;
@@ -160,15 +160,11 @@ span{
     padding-top: 10px;
     margin-top: 10px;
     display: contents;
-    position: relative;
-}
-
-.portfolio-layer h3{
-    font-size: 3rem;
+    position: absolute;
+    font-size: 1rem;
     font-weight: 600;
 }
-
-.portfolio-layer p{
-    font-size: 1rem;
+.portfolio-layer h3{
+    font-size: 3rem;
     font-weight: 600;
 }
