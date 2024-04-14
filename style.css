@@ -102,6 +102,8 @@ span{
     font-weight: 600;
     justify-content: center;
     color: rgba(251, 157, 80, 0.76);
+    align-items: center;
+    text-align: center;
 }
 
 .about-img img{
@@ -116,4 +118,38 @@ span{
 .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.portfolio{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;    
+}
+
+.portfolio .portfolio-img img{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.portfolio-content .portfolio-layer p{
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+    align-items: left;
+
 }
