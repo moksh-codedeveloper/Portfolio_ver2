@@ -121,50 +121,68 @@ span{
 }
 
 .portfolio{
-    display: flex;
-    position: absolute;
-    height: 100vh;
-    padding: 10px;
-    width: 90vw;
+    height: 300px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 10px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;    
 }
-.portfolio-container{
+.portfolio-container .portfolio-img img{
+    height: 200px;
+    width: 200px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 50rem;
-    width: 100%;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    flex-wrap: nowrap;
 }
 
-.portfolio-layer{
-    height:50%;
-    width: 70%;
-    display: inline-flex;
-    flex-direction: column;
+.portfolio-container .portfolio-layer p{
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-.portfolio-container img{
-    height: 40%;
-    position: relative;
-}
-.portfolio-layer p{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    margin-top: 10px;
-    display: contents;
+    text-align: justify;
+    padding: 10px;
+    margin-left: 40px;
+    margin-bottom: 60px;
     position: absolute;
-    font-size: 1rem;
-    font-weight: 600;
 }
-.portfolio-layer h3{
-    font-size: 3rem;
-    font-weight: 600;
+
+
+.contact{
+    height: 200px;
+    width: 200px;
+    justify-content: space-between; 
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact form{
+    height: 1rem;
+    width: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    margin: 200px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 10px;
 }
