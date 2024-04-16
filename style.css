@@ -180,11 +180,12 @@ span{
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 40px;
+    padding: 30px;
 }
 .contact form .input-box{
     height: 100px;
     width: 100px;
-    margin: 10px;
+    margin-top: 10px;
     padding-top: 10px;
     padding-left: 20px;
     justify-content: space-between;
@@ -200,12 +201,14 @@ span{
 }
 .contact form .input-box input{
     padding: 10px;
-    margin: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     color: var(--bg-color);
     font-size: 10px;
     font-weight: 900;
     box-shadow: 0  0  1 var(--bg-color);
+    height: 2rem;
+    width: 8rem;
 }
 
 .contact form .input-box input:hover,
@@ -220,6 +223,24 @@ span{
     padding-top: 20px;
     margin-top: 30px;
     border-radius: 30px;
+    border: 2px solid var(--bg-color);
+}
+
+.contact form textarea:hover,
+.contact form textarea:active{
+    background-color: var(--text-color);
+    box-shadow: 1px 2px 1px var(--bg-color);
+    color: var(--main-color);
+}
+.contact form input{
+    border-radius: 10px;
+    padding-top: 5px;
+    margin-left: 10px;
+    padding-right: 2px;
+    height: 3rem;
+    width: 5rem;
+    padding-left: 1px;
+    margin-bottom: 5px;
 }
 ::-webkit-scrollbar{
     width: 10px;
