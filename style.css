@@ -64,7 +64,30 @@
 
 .popup.active .content{
     transform: translate(-50%, -50%) scale(1);
-    transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; 
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 240px;
+}
+.dropdown-menu a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 .header{
@@ -94,7 +117,12 @@ nav{
     text-align: center; 
     margin-left: 10px;   
 }
-
+.toggle-btn{
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
 .navbar a:hover{
     text-decoration:underline;
     transition: .9s ease-in-out;
@@ -327,4 +355,26 @@ footer .footer-content a i{
 ::-webkit-scrollbar-thumb{
     background-color: blue;
     border-radius: 10px;
+}
+
+/* responsive design */
+
+@media (max-width: 992px) {
+    .navbar a{
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media (max-width : 576px) {
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
 }
