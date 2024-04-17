@@ -18,6 +18,55 @@
     --snd-bg-color: #1679AB;
     --main-color: #074173;
 }
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.264);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms ease-in-out;
+    
+}
 .header{
     display: flex;
     flex-direction: row;
@@ -214,17 +263,17 @@ span{
     background-color: var(--snd-bg-color);
     color: var(--text-color);
 }
-.contact form input{
+.contact form .msg{
     padding: 10px;
     margin: 10px;
     border-radius: 50px;
 }
-.contact form input:hover,
-.contact form input:active{
+.contact form .msg:hover,
+.contact form .msg:active{
     background-color: var(--snd-bg-color);
     box-shadow: 1px 2px var(--text-color);
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 900;   
 }
 footer{
     height: 20px;
