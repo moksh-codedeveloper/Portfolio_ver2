@@ -10,6 +10,7 @@
     background-color: var(--main-color);
     color: var(--text-color);
     scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
 }
 :root{
     --bg-color: #C5FF95;
@@ -47,12 +48,12 @@ nav{
 
 .navbar a:hover{
     text-decoration:underline;
-    transition: .9s ease;
-    color: crimson;
+    transition: .9s ease-in-out;
+    color: var(--snd-bg-color);
     content: "";
-    bottom: 0;
     top: 1;
     transform: translate(11px);
+    transform: scale(23px);
 }
 
 span{
@@ -195,7 +196,81 @@ span{
     padding: 10px;
     border-radius: 30px;
 }
+.contact form .input-box input:hover{
+    background-color: var(--snd-bg-color);
+    box-shadow: 1px 2px 0.5px var(--bg-color);
+    font-size: 10px;
+    font-weight: 700;
+}
+.contact form textarea{
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+}
 
+.contact form textarea:hover{
+    box-shadow: 1px 2px 0.5px var(--bg-color);
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+.contact form input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+}
+.contact form input:hover,
+.contact form input:active{
+    background-color: var(--snd-bg-color);
+    box-shadow: 1px 2px var(--text-color);
+    font-size: 10px;
+    font-weight: 900;
+}
+footer{
+    height: 20px;
+    width: 100%;
+    margin-bottom: 1px;
+    padding: 100px;
+    position: absolute;
+}
+
+footer .footer-content p{
+    font-size: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+footer .footer-content .social-account{
+    display: flex;
+    height: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+footer .footer-content .social-account a , i{
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 3px;
+    padding-left: 2px;
+    padding-right: 3px;
+}
+
+footer .footer-content a i{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    padding-right: 4px;
+}
 ::-webkit-scrollbar{
     width: 10px;
 }
