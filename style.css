@@ -522,6 +522,41 @@ footer .footer-content a i{
         position: relative;
     }
 }
+@media(max-width: 676px) {
+    .home {
+        width: 80vw;
+        height: unset;
+        /* margin: 0;
+        padding: 0; */
+    }
+    .home-img img{
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-content p , h2 , h3 , h1{
+        margin: 0.1rem; 
+        padding-left: 0.1em;
+        font-size : 30px;
+    }
+    .about{
+        height: unset;
+        width: 80vw;
+        margin: 0.1rem;
+        padding: 0.1rem;
+    }
+    .about-img{
+        width: 50vw;
+        margin-left: 0.1rem;
+        padding-right: 0.1rem;
+    }
+    .portfolio{
+        height: 30vh;
+        padding: 1px;
+        margin: 1px;
+    }
+                    
+}
 
 @media (max-width : 576px) {
     .dropdown-menu{
