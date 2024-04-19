@@ -505,9 +505,9 @@ footer .footer-content a i{
         width: 80vw;
         position: relative;
     }
-    footer{
-        /* display: none; */
-    }
+    /* footer{
+        display: none; 
+    } */
 }
 
 @media (max-width : 576px) {
