@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
+}
+:root{
+    --bg-color: #C5FF95;
+    --text-color: #5DEBD7;
+    --snd-bg-color: #1679AB;
+    --main-color: #074173;
+}
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.264);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms ease-in-out; 
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 240px;
+}
+.dropdown-menu a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    top: 0;
+    left: 10px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    flex-direction: row;    
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.navbar a {
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    left: 0;
+    top: 0;
+    text-align: center; 
+    margin-left: 10px;   
+}
+.toggle-btn{
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.navbar a:hover{
+    text-decoration:underline;
+    transition: .9s ease-in-out;
+    color: var(--snd-bg-color);
+    content: "";
+    top: 1;
+    transform: translate(11px);
+    transform: scale(23px);
+}
+
+span{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.home .home-img img{
+    margin: 1px;
+    padding: 1px;
+    height: 300px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: row;
+}
+.home{
+    justify-content: space-between; 
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.home .home-content{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.home .home-content p{
+    margin: 20px;
+    padding: 20px;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: 600;
+    justify-content: center;
+    color: var(--text-color);
+    align-items: center;
+    text-align: justify;
+}
+
+.about-img img{
+    width: 350px;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.portfolio{
+    height: 200px;
+    width: 900px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.portfolio-container .portfolio-img img{
+    height: 200px;
+    display: flex;
+    position: sticky;
+    padding: 10px;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio-container .portfolio-layer p{
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-bottom: 60px;
+    margin-top: 1px;
+    position: relative;
+}
+.contact{
+    height: 600px;
+    width: 600px;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-top: 200px;
+    margin-left: 500px;
+}
+.contact form {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.contact form .input-box input{
+    text-align: center;
+    color: var(--bg-color);
+    font-size: 10px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 30px;
+}
+.contact form .input-box input:hover{
+    background-color: var(--snd-bg-color);
+    box-shadow: 1px 2px 0.5px var(--bg-color);
+    font-size: 10px;
+    font-weight: 700;
+}
+.contact form textarea{
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.contact form textarea:hover{
+    box-shadow: 1px 2px 0.5px var(--bg-color);
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+.contact form .msg{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+}
+.contact form .msg:hover,
+.contact form .msg:active{
+    background-color: var(--snd-bg-color);
+    box-shadow: 1px 2px var(--text-color);
+    font-size: 10px;
+    font-weight: 900;   
+}
+footer{
+    height: 20px;
+    margin-bottom: 1px;
+    padding: 100px;
+    position: absolute;
+}
+
+footer .footer-content p{
+    font-size: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+footer .footer-content .social-account{
+    display: flex;
+    height: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+footer .footer-content .social-account a , i{
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 3px;
+    padding-left: 2px;
+    padding-right: 3px;
+}
+
+footer .footer-content a i{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    padding-right: 4px;
+}
+.read-btn{
+    display: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 10px;
+}
+/* responsive design */
+@media(max-width : 1200px) {
+    *{
+        font-size: 1;
+    }
+}
+@media (max-width: 992px) {
+    .navbar a{
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+    .home-content{
+        height: 300px;
+        padding: 100px;
+        margin: 100px;
+        display: block;
+    }
+    .home-img img{
+        width: 60vw;
+        height: 60vh;
+        /* margin-top: 5rem; */
+        margin-left: 4rem;
+        justify-content: space-evenly;
+    }
+    .home{
+        margin: 100px;
+        height: 100vh;
+        padding-top: 100px;
+        padding-left: 12px;
+        display: inline;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-content p{
+        padding: 1rem;
+        display: contents;
+        position: relative;
+        margin-left: 1rem;
+        padding-left: 10px;
+    }
+    
+    .home-content h2, h3{
+        padding: 0.1rem;
+        margin-left: 1rem;
+    }
+    .heading{
+        font-size: 40px;
+        margin-left: 10px;
+        margin-top: 20px;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+    }
+    .about-content{
+        height: 100px;
+        width: 100px;
+        position: relative;
+    }
+    .read-more{
+        display: none;
+    }
+    .about-img img{
+        width: 30vw;
+        margin-top: 8rem;
+        margin-left: 1rem;
+        display: flex;
+        flex: content;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img{
+        align-items: center;
+        justify-content: center;
+        width: 70vw;
+        margin-right: 10px;
+        padding: 1px;
+        position: relative;
+        margin-left: 5px;
+    }
+    .about{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .about-content p{
+        width: 100vw;
+        margin-top: 1rem;
+        padding-left: 1rem;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+    }
+    .about-content h2{
+        margin-top: 3rem;
+        display: flex;
+        order: 1;
+        padding-top: 1rem;
+    }
+    .read-btn{
+        padding: 10px;
+        margin: 1px;
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        display: inline;
+        color: var(--bg-color);
+        background-color: var(--main-color);
+    }
+    .portfolio-img img{
+        width: 40vw;
+        margin-top: 10rem;
+    }
+    .contact{
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+        margin-right: 10px;
+        margin-left: 1rem;
+        position: relative;
+        display: block;
+    }
+    .contact h2{
+        font-size: 40px;
+        display: inline;
+        position: relative;
+        justify-content: space-evenly;
+        padding: 2px;
+        margin: 10px;
+    }
+    .contact form{
+        height: 80vh;
+        margin-top: 10rem;
+        padding: 100px;
+    }
+    footer{
+        display: none;
+    }
+}
+
+@media (max-width : 576px) {
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+}
