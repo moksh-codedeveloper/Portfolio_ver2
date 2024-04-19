@@ -554,13 +554,37 @@ footer .footer-content a i{
         height: 30vh;
         padding: 1px;
         margin: 1px;
-    }
-                    
+    }              
 }
 
 @media (max-width : 576px) {
     .dropdown-menu{
         left: 2rem;
         width: unset;
+    }
+    .home{
+        height: 90vh;
+        width: unset;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .home-img img{
+        width: unset;
+        height: 70vh;
+    }
+    .home-content {
+        width: 100%;
+        height: 30vh;
+        margin: 0;
+        padding: 0;
+    }
+    .about-img img{
+        padding: 0;
+        margin: 0;
+    }
+    .portfolio-img img{
+        width: unset;
+        height: 80vh;
     }
 }
