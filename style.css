@@ -585,22 +585,25 @@ footer .footer-content a i{
         margin: 0;
         padding: 0;
     } */
-    
-}
-
-/* @media (max-width: 281px) {
-    *{
-        margin: 0rem;
-        padding: 0rem;
-        width: unset;
-        height: 100vh;
-    }
-    .home-content .about-content .portfolio-container p{
+    .home-img img{
+        width: 80%;
         margin: 1rem;
         padding: 1rem;
-        justify-content: space-between;
-        height: 100vh;
-        width: 100vw;
+    }
+    .home{
+        width: 100%;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .home-content{
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+        height: unset;
+    }
+    .about{
+        margin-top: 40rem;
 
     }
-} */
+}
+
