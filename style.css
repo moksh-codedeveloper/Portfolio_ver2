@@ -564,14 +564,15 @@ footer .footer-content a i{
         text-align: center;
     }
     .home-img img{
-        width: unset;
-        height: 70vh;
+        width: 40%;
+        margin: 0.1rem;
+        padding: 0.1rem;
     }
     .home-content {
-        width: 100%;
-        height: 30vh;
-        margin: 0;
-        padding: 0;
+        width: 70%;
+        /* height: 100%; */
+        margin: 0.1rem;
+        padding: 0.1rem;
     }
     .about-img img{
         padding: 0;
@@ -579,7 +580,7 @@ footer .footer-content a i{
     }
     .portfolio-img img{
         width: unset;
-        height: 80vh;
+        height: 50%;
     }
 }
 @media(max-width: 476px) {
