@@ -582,3 +582,9 @@ footer .footer-content a i{
         height: 80vh;
     }
 }
+@media(max-width: 476px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
